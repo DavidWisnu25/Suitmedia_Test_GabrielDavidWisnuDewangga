@@ -1,0 +1,36 @@
+.fixed-header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: top 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.fixed-header.hide {
+    top: -100px; /* Sembunyikan header saat scroll ke bawah */
+}
+
+.fixed-header.show {
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.8); /* Background transparan saat muncul */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    margin: 0;
+    background-color: #333;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+nav ul li.active a {
+    background-color: #555; /* Active state styling */
+}
