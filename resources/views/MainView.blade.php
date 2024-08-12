@@ -20,6 +20,12 @@
             font-weight: bold;
         }
 
+        .banner-container {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+
         .banner-image {
             width: 100%;
             height: 60vh; 
@@ -27,6 +33,15 @@
             display: block;
             clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
             margin-bottom: 50px;
+        }
+
+        .banner-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2rem;
+            font-weight: bold;
         }
 
         .gambar {
@@ -81,7 +96,13 @@
             
         </nav>
 
-        <img src="{{ asset('img/hotel3.jpg') }}" alt="Banner Image" class="banner-image">
+        <div class="banner-container">
+            <img src="{{ asset('img/hotel3.jpg') }}" alt="Banner Image" class="banner-image">
+            <div class="banner-text">
+                <h1>Ideas</h1>
+                Where all our great things began
+            </div>
+        </div>
 
         <div class="row align-items-center mt-3">
             <!-- Column 1 -->
